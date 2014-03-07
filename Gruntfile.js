@@ -299,7 +299,7 @@ module.exports = function(grunt) {
 
       // optimized for watch, src is built on watch task using callbacks
       buildDocsCSS: {
-				src: 'src/**/*.scss',
+				src: 'src/testapp.scss',
 				dest: 'docs/build/uncompressed/',
 				expand: true,
 				ext: '.css',
