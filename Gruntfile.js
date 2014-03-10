@@ -8,8 +8,8 @@ module.exports = function(grunt) {
     ],
 
     watchTasks = [
-      // compiles less to docs
-      'less:buildDocsCSS',
+      // compiles scss to docs
+      'scss:buildDocsCSS',
 
       // auto prefix doc files
       'autoprefixer:prefixFile',
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
     ],
 
     testTasks = [
-      // compiles less to docs so phantomjs can read
-      'less:buildTestCSS',
+      // compiles scss to docs so phantomjs can read
+      'scss:buildTestCSS',
 
       // test components
       'karma:travis'
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
       // copies assets and js over to build dir
       'copy:srcToBuild',
 
-      // compiles less
-      'less:buildCSS',
+      // compiles scss
+      'sass:buildCSS',
 
       // auto prefix docs files
       'autoprefixer:prefixDocs',
@@ -135,16 +135,16 @@ module.exports = function(grunt) {
 
     setWatchFiles = function(action, filePath) {
       var
-        buildPath = filePath.replace('src/', 'docs/build/uncompressed/').replace('less', 'css')
+        buildPath = filePath.replace('src/', 'docs/build/uncompressed/').replace('scss', 'css')
       ;
-      if(filePath.search('.less') !== -1) {
-        grunt.config('less.buildDocsCSS.src', filePath);
-        grunt.config('less.buildDocsCSS.dest', buildPath);
+      if(filePath.search('.scss') !== -1) {
+        grunt.config('scss.buildDocsCSS.src', filePath);
+        grunt.config('scss.buildDocsCSS.dest', buildPath);
         grunt.config('autoprefixer.prefixFile.src', buildPath);
       }
       else {
-        grunt.config('less.buildDocsCSS.src', 'non/existant/path');
-        grunt.config('less.buildDocsCSS.dest', 'non/existant/path');
+        grunt.config('scss.buildDocsCSS.src', 'non/existant/path');
+        grunt.config('scss.buildDocsCSS.dest', 'non/existant/path');
         grunt.config('autoprefixer.prefixFile.src', 'non/existant/path');
       }
     },
@@ -183,7 +183,7 @@ module.exports = function(grunt) {
       src: {
         files: [
           'build/examples/**/*',
-          'src/**/*.less',
+          'src/**/*.scss',
           'src/**/*.js'
         ],
         tasks : watchTasks
@@ -231,8 +231,7 @@ module.exports = function(grunt) {
         cwd    : 'build/',
         dest   : 'build/',
         src    : [
-          '**/*.less',
-          '**/*.css',
+          '**/*.css'
         ]
       },
       prefixDocs: {
@@ -240,8 +239,7 @@ module.exports = function(grunt) {
         cwd    : 'docs/build/',
         dest   : 'docs/build/',
         src    : [
-          '**/*.less',
-          '**/*.css',
+          '**/*.css'
         ]
       },
       prefixFile: {
@@ -254,7 +252,7 @@ module.exports = function(grunt) {
         force: true
       },
       build : [
-        'build/less',
+        'build/scss',
         'build/minified',
         'build/packaged',
         'build/uncompressed'
@@ -288,7 +286,7 @@ module.exports = function(grunt) {
         expand : true,
         cwd    : 'build/',
         src    : [
-          '**/*.less',
+          '**/*.scss',
           '**/*.css',
         ],
         dest   : 'rtl'
@@ -313,7 +311,7 @@ module.exports = function(grunt) {
         rename : preserveFileExtensions
       },
       buildCSS: {
-        src: 'src/**/*.scss',
+        src: 'src/testapp.scss',
         dest: 'build/uncompressed/',
         expand: true,
         ext: '.css',
@@ -326,23 +324,23 @@ module.exports = function(grunt) {
       srcToDocs: {
 
         files: [
-          // exact copy for less
+          // exact copy for scss
           {
             expand : true,
-            cwd    : 'src/**/*.less',
+            cwd    : 'src/**/*.scss',
             src    : [
               '**/*'
             ],
-            dest : 'docs/build/less'
+            dest : 'docs/build/scss'
           },
-          // copy everything but less files for uncompressed release
+          // copy everything but scss files for uncompressed release
           {
             expand : true,
             cwd    : 'src/',
             src    : [
               '**/*.js',
-              'images/*',
-              'fonts/*'
+              'assets/images/*',
+              'assets/fonts/*'
             ],
             dest : 'docs/build/uncompressed'
           },
@@ -351,8 +349,8 @@ module.exports = function(grunt) {
             expand : true,
             cwd    : 'src/',
             src    : [
-              'images/*',
-              'fonts/*'
+              'assets/images/*',
+              'assets/fonts/*'
             ],
             dest : 'docs/build/minified'
           },
@@ -362,8 +360,8 @@ module.exports = function(grunt) {
             expand : true,
             cwd    : 'src/',
             src    : [
-              'images/*',
-              'fonts/*'
+              'assets/images/*',
+              'assets/fonts/*'
             ],
             dest : 'docs/build/packaged'
           }
@@ -373,23 +371,23 @@ module.exports = function(grunt) {
       srcToBuild: {
 
         files: [
-          // exact copy for less
+          // exact copy for scss
           {
             expand : true,
             cwd    : 'src/',
             src    : [
               '**/*'
             ],
-            dest : 'build/less'
+            dest : 'build/scss'
           },
-          // copy everything but less files for uncompressed release
+          // copy everything but scss files for uncompressed release
           {
             expand : true,
             cwd    : 'src/',
             src    : [
               '**/*.js',
-              'images/*',
-              'fonts/*'
+              'assets/images/*',
+              'assets/fonts/*'
             ],
             dest : 'build/uncompressed'
           },
@@ -398,8 +396,8 @@ module.exports = function(grunt) {
             expand : true,
             cwd    : 'src/',
             src    : [
-              'images/*',
-              'fonts/*'
+              'assets/images/*',
+              'assets/fonts/*'
             ],
             dest : 'build/minified'
           },
@@ -409,8 +407,8 @@ module.exports = function(grunt) {
             expand : true,
             cwd    : 'src/',
             src    : [
-              'images/*',
-              'fonts/*'
+              'assets/images/*',
+              'assets/fonts/*'
             ],
             dest : 'build/packaged'
           }
@@ -641,7 +639,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', buildTasks);
   grunt.registerTask('reset', resetTasks);
 
-  // compiles only changed less files <https://npmjs.org/package/grunt-contrib-watch>
+  // compiles only changed scss files <https://npmjs.org/package/grunt-contrib-watch>
   grunt.event.on('watch', setWatchFiles);
 
 };

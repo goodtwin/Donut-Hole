@@ -14,10 +14,10 @@
     "url": "git://github.com/Semantic-Org/Semantic-UI.git"
   },
   "dependencies": {
-    "docpad": "~6.63.3",
+    "docpad": "~6.64.0",
     "docpad-plugin-eco": "~2.0.3",
-    "docpad-plugin-ghpages": "~2.4.1",
-    "docpad-plugin-partials": "~2.8.1"
+    "docpad-plugin-ghpages": "~2.4.3",
+    "docpad-plugin-partials": "~2.9.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -48,8 +48,8 @@
     "grunt-autoprefixer": "~0.4.0",
     "grunt-karma-coveralls": "~2.2.0",
     "karma-coverage": "~0.1.4",
-    "docpad-plugin-partials": "~2.8.1",
-    "docpad-plugin-ghpages": "~2.4.2",
+    "docpad-plugin-partials": "~2.9.0",
+    "docpad-plugin-ghpages": "~2.4.3",
     "docpad-plugin-eco": "~2.0.3",
     "docpad": "~6.63.3",
     "grunt-sass": "~0.11.0"

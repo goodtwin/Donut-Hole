@@ -45,8 +45,8 @@
 
 .ui.vertical.segment {
   margin: 0em;
-  padding-right: 0em;
   padding-left: 0em;
+  padding-right: 0em;
   background-color: transparent;
   border-radius: 0px;
   -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
@@ -68,7 +68,7 @@
 }
 
 .ui.horizontal.segment:first-child {
-  padding-right: 0em;
+  padding-left: 0em;
 }
 
 /*-------------------
@@ -135,7 +135,7 @@
   content: "";
   display: block;
   height: 100%;
-  right: -1px;
+  left: -1px;
   position: absolute;
   width: 100%;
   -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
@@ -171,7 +171,7 @@
   content: '';
   position: absolute;
   bottom: -3px;
-  right: 0%;
+  left: 0%;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.02);
   width: 100%;
@@ -325,11 +325,11 @@
 --------------------*/
 
 .ui.left.aligned.segment {
-  text-align: right;
+  text-align: left;
 }
 
 .ui.right.aligned.segment {
-  text-align: left;
+  text-align: right;
 }
 
 .ui.center.aligned.segment {
@@ -350,11 +350,11 @@
 
 .ui.floated.segment,
 .ui.left.floated.segment {
-  float: right;
+  float: left;
 }
 
 .ui.right.floated.segment {
-  float: left;
+  float: right;
 }
 
 /*-------------------
@@ -404,7 +404,7 @@
   background-color: #555555;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
-  background-image: -webkit-gradient(linear, right top, right bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
   color: #FAFAFA;
 }
@@ -413,7 +413,7 @@
   background-color: #555555;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6)));
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
-  background-image: -webkit-gradient(linear, right top, right bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6)));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
   color: #EEEEEE;
 }

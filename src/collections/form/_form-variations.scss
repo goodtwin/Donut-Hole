@@ -9,9 +9,6 @@
 
 .ui.form.fluid {
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -35,39 +32,13 @@
   position: absolute;
   top: 2em;
   right: 0.5em;
-  font-family: 'Icons';
-  content: '\f133';
   font-size: 1.2em;
-  font-weight: normal;
-  color: #CCCCCC;
 }
 
 
 /*--------------------
     Inverted Colors
 ---------------------*/
-
-.ui.inverted.form label {
-  color: #FFFFFF;
-}
-.ui.inverted.form .field.error textarea,
-.ui.inverted.form .field.error input[type="text"],
-.ui.inverted.form .field.error input[type="email"],
-.ui.inverted.form .field.error input[type="date"],
-.ui.inverted.form .field.error input[type="password"],
-.ui.inverted.form .field.error input[type="number"],
-.ui.inverted.form .field.error input[type="url"],
-.ui.inverted.form .field.error input[type="tel"]{
-  background-color: #FFCCCC;
-}
-
-.ui.inverted.form .ui.checkbox label {
-  color: rgba(255, 255, 255, 0.8);
-}
-.ui.inverted.form .ui.checkbox label:hover,
-.ui.inverted.form .ui.checkbox .box:hover {
-  color: #FFFFFF;
-}
 
 /*--------------------
      Field Groups
@@ -104,14 +75,6 @@
 .ui.form .fields > .field {
   clear: none;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.ui.form .fields > .field:first-child {
-  border-left: none;
-  box-shadow: none;
 }
 
 /* Other Combinations */

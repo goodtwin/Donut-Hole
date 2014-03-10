@@ -155,15 +155,15 @@
 
 .ui.form .inline.field .prompt {
   margin-top: 0em;
-  margin-right: 1em;
+  margin-left: 1em;
 }
 
 .ui.form .inline.field .prompt:before {
   margin-top: -0.3em;
   bottom: auto;
-  left: auto;
+  right: auto;
   top: 50%;
-  right: 0em;
+  left: 0em;
 }
 
 /*******************************
@@ -184,8 +184,8 @@
 .ui.form textarea:focus {
   color: rgba(0, 0, 0, 0.85);
   border-color: rgba(0, 0, 0, 0.2);
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   -webkit-appearance: none;
   -webkit-box-shadow: 0.3em 0em 0em 0em rgba(0, 0, 0, 0.2) inset;
   box-shadow: 0.3em 0em 0em 0em rgba(0, 0, 0, 0.2) inset;
@@ -244,11 +244,11 @@
 .ui.form .field.error input[type="tel"] {
   background-color: #FFFAFA;
   border-color: #E7BEBE;
-  border-right: none;
+  border-left: none;
   color: #D95C5C;
-  padding-right: 1.2em;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  padding-left: 1.2em;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   -webkit-box-shadow: 0.3em 0em 0em 0em #D95C5C inset;
   box-shadow: 0.3em 0em 0em 0em #D95C5C inset;
 }
@@ -338,7 +338,7 @@
 .ui.form.loading:after {
   position: absolute;
   top: 0%;
-  right: 0%;
+  left: 0%;
   content: '';
   width: 100%;
   height: 100%;
@@ -381,7 +381,7 @@
 .ui.form .date.field > label:after {
   position: absolute;
   top: 2em;
-  left: 0.5em;
+  right: 0.5em;
   font-family: 'Icons';
   content: '\f133';
   font-size: 1.2em;
@@ -455,7 +455,7 @@
 
 .ui.form .fields > .field {
   clear: none;
-  float: right;
+  float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -463,7 +463,7 @@
 }
 
 .ui.form .fields > .field:first-child {
-  border-right: none;
+  border-left: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -473,29 +473,29 @@
 .ui.form .two.fields > .fields,
 .ui.form .two.fields > .field {
   width: 50%;
-  padding-right: 1%;
   padding-left: 1%;
+  padding-right: 1%;
 }
 
 .ui.form .three.fields > .fields,
 .ui.form .three.fields > .field {
   width: 33.333%;
-  padding-right: 1%;
   padding-left: 1%;
+  padding-right: 1%;
 }
 
 .ui.form .four.fields > .fields,
 .ui.form .four.fields > .field {
   width: 25%;
-  padding-right: 1%;
   padding-left: 1%;
+  padding-right: 1%;
 }
 
 .ui.form .five.fields > .fields,
 .ui.form .five.fields > .field {
   width: 20%;
-  padding-right: 1%;
   padding-left: 1%;
+  padding-right: 1%;
 }
 
 /* Swap to full width on mobile */
@@ -510,17 +510,17 @@
   .ui.form .five.fields > .fields,
   .ui.form .five.fields > .field {
     width: 100%;
-    padding-right: 0%;
     padding-left: 0%;
+    padding-right: 0%;
   }
 }
 
 .ui.form .fields .field:first-child {
-  padding-right: 0%;
+  padding-left: 0%;
 }
 
 .ui.form .fields .field:last-child {
-  padding-left: 0%;
+  padding-right: 0%;
 }
 
 /*--------------------
@@ -529,7 +529,7 @@
 
 .ui.form .inline.fields .field {
   min-height: 1.3em;
-  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .ui.form .inline.fields .field > label,
@@ -553,7 +553,7 @@
 
 .ui.form .inline.fields .field > :first-child,
 .ui.form .inline.field > :first-child {
-  margin: 0em 0em 0em 0.5em;
+  margin: 0em 0.5em 0em 0em;
 }
 
 .ui.form .inline.fields .field > :only-child,
