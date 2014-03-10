@@ -1,17 +1,17 @@
 {
-  "name": "semantic",
-  "version": "0.13.1",
-  "title": "Semantic UI",
-  "description": "Semantic empowers designers and developers by creating a shared vocabulary for UI.",
-  "homepage": "http://www.semantic-ui.com",
-  "author": "Jack Lukic <jacklukic@gmail.com>",
+  "name": "donuthole",
+  "version": "0.1.0",
+  "title": "Donut Hole UI",
+  "description": "Based on Semantic UI, now with SCSS and OOCSS concepts.",
+  "homepage": "http://goodtwin.co",
+  "author": "Andrew Wirick <andrew@goodtwin.co>",
   "license": "MIT",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Semantic-Org/Semantic-UI.git"
+    "url": "git://github.com/goodtwin/donut-hole.git"
   },
   "dependencies": {
     "docpad": "~6.64.0",
