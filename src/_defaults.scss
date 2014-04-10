@@ -12,8 +12,24 @@ $debug-mode:        false!default;
     $OBJECTS
 \*------------------------------------*/
 /**
- * Which collections, views, and modules would you like to do?
+ * Which elements, collections, views, and modules would you like to do?
  */
+
+/**
+ * Elements
+**/
+$use-button:       false!default;
+$use-divider:      false!default;
+$use-header:       false!default;
+$use-icons:        false!default;
+$use-image:        false!default;
+$use-input:        false!default;
+$use-label:        false!default;
+$use-loader:       false!default;
+$use-progress:     false!default;
+$use-reveal:       false!default;
+$use-segment:      false!default;
+$use-step:         false!default;
 
 /**
  * Collections
