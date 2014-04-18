@@ -104,6 +104,7 @@ $.fn.sidebar = function(parameters) {
             ? callback
             : function(){}
           ;
+          event.preventDefault();
           module.debug('Showing sidebar', callback);
           if(module.is.closed()) {
             if(!settings.overlay) {
@@ -127,6 +128,7 @@ $.fn.sidebar = function(parameters) {
             ? callback
             : function(){}
           ;
+          event.preventDefault();
           module.debug('Hiding sidebar', callback);
           if(module.is.open()) {
             if(!settings.overlay) {
